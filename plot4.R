@@ -37,11 +37,11 @@
 ## Reading the Data
 
 hpcDat<-read.table("./household_power_consumption.txt",header=FALSE,sep=";",
-                    col.names=read.table("./household_power_consumption.txt",
-                                         colClasses="character",sep=";",nrows=1)
+                   col.names=read.table("./household_power_consumption.txt",
+                                        colClasses="character",sep=";",nrows=1)
                    ,comment.char="",colClasses=c(rep("character",2),
-                    rep("numeric",7)),nrows=2881,skip=66637,
-                    na.strings="?")
+                                                 rep("numeric",7)),nrows=2881,skip=66637,
+                   na.strings="?")
 
 ## Convert hpcDat$Date and hpcDat$Time columns from "character" to "Date/Time" 
 ## class.e
@@ -55,17 +55,29 @@ hpcDat$Time<-DateTime
 ## Plotting the histogram in Plot 1 on screen device.
 
 windows()
-with(hpcDat, plot(hpcDat$Time,hpcDat$Sub_metering_1,type="n",ylab="Energy Sub Metering", xlab=""))
+par(mfrow=c(2,2))
+
+## Plotting the Global_Active_Power graph in position r1c1
+plot(hpcDat$Time,hpcDat$Global_active_power,type="l",
+     ylab="Global Active Power (kilowatts)",xlab="")
+
+## Plotting the Voltage in position r1c2
+plot(hpcDat$Time,hpcDat$Voltage,type="l",
+     ylab="Voltage",xlab="datetime")
+
+## Plotting the Sub_metering graph in position r2c1
+with(hpcDat, plot(hpcDat$Time,hpcDat$Sub_metering_1,type="n",
+                  ylab="Energy Sub Metering", xlab=""))
 points(hpcDat$Time,hpcDat$Sub_metering_1,col="black", type="l")
 points(hpcDat$Time,hpcDat$Sub_metering_2,col="red", type="l")
 points(hpcDat$Time,hpcDat$Sub_metering_3,col="blue", type="l")
 legend("topright", ,col=c("black","red","blue"),pch = 151,
        legend=c("Sub_Metering_1","Sub_Metering_2","Sub_Metering_3"))
-    
+
+## Plotting the Global_reactive_power graph in position r2c2
+plot(hpcDat$Time,hpcDat$Global_reactive_power,type="l",
+     ylab="Global_reactive_power",xlab="datetime")
+
 ## Copy Plot to PNG Device.
-dev.copy(png,file="plot3.png",width=480,height=480)
+dev.copy(png,file="plot4.png",width=480,height=480)
 dev.off()
-
-
-
-

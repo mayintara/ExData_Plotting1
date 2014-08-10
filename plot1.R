@@ -12,7 +12,7 @@
 ## FileUrl <- url
 ## download.file(FileUrl,DestFile,mode="wb")
 ## unzip(DestFile,exdir=paste(datadir,"Asgmnt",sep="/"))
-## setwd(paste(datadir,"Asgmnt",sep="/"))
+## setwd(paste(datadir,"household",sep="/"))
 ## ddwnld<-date()
 ## ddwnld
 ## }
@@ -49,7 +49,7 @@ hpcDat<-read.table("./household_power_consumption.txt",header=FALSE,sep=";",
 Date<-as.Date(hpcDat$Date,"%d/%m/%Y")
 Time<-hpcDat$Time
 X<-paste(Date,Time)
-DateTime<-strftime(X,"%Y-%m-%d %H:%M:%S", usetz=FALSE)
+DateTime<-strptime(X,format="%Y-%m-%d %H:%M:%S")
 hpcDat$Time<-DateTime
 
 ## Plotting the histogram in Plot1 on screen device.

@@ -12,7 +12,7 @@
 ## FileUrl <- url
 ## download.file(FileUrl,DestFile,mode="wb")
 ## unzip(DestFile,exdir=paste(datadir,"Asgmnt",sep="/"))
-## setwd(paste(datadir,"Asgmnt",sep="/"))
+## setwd(paste(datadir,"household",sep="/"))
 ## ddwnld<-date()
 ## ddwnld
 ## }
@@ -55,8 +55,9 @@ hpcDat$Time<-DateTime
 ## Plotting the histogram in Plot 1 on screen device.
 
 windows()
-plot(hpcDat$Time,hpcDat$Global_active_power,type="l",ylab="Global Active Power 
-     (kilowatts)", xlab="")
+par(mar=c(5,4,3,2))
+plot(hpcDat$Time,hpcDat$Global_active_power,type="l",ylab="Global Active Power (kilowatts)",
+     xlab="")
 
 ## Copy Plot to PNG Device.
 dev.copy(png,file="plot2.png",width=480,height=480)
