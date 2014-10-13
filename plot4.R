@@ -36,8 +36,8 @@
 
 ## Reading the Data
 
-hpcDat<-read.table("./household_power_consumption.txt",header=FALSE,sep=";",
-                   col.names=read.table("./household_power_consumption.txt",
+hpcDat<-read.table("D:/Work/R/adir/household/household_power_consumption.txt",header=FALSE,sep=";",
+                   col.names=read.table("D:/Work/R/adir/household/household_power_consumption.txt",
                                         colClasses="character",sep=";",nrows=1)
                    ,comment.char="",colClasses=c(rep("character",2),
                                                  rep("numeric",7)),nrows=2881,skip=66637,

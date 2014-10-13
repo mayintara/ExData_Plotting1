@@ -20,7 +20,7 @@
 ## RAM Calculations >>>> Since colClasses="numeric"
 ## 2075259 (rows) x 9 (cols) x 8 bytes/numeric
 ## 149418648 bytes ~ 149418648/2^20 bytes/MB ~ 142.49 MB
-## Overhead required (Rule Of Thumb x 2) so we need roughly 285 MB. (SAFE)-
+## Overhead required (Rule Of Thumb x 2) so we need roughly 285 MB. (SAFE)
 
 ## Further optimizing the read.table function >>>>
 ## colClasses="numeric"-
@@ -36,8 +36,8 @@
 
 ## Reading the Data
 
-hpcDat<-read.table("./household_power_consumption.txt",header=FALSE,sep=";",
-                    col.names=read.table("./household_power_consumption.txt",
+hpcDat<-read.table("D:/Work/R/adir/household/household_power_consumption.txt",header=FALSE,sep=";",
+                    col.names=read.table("D:/Work/R/adir/household/household_power_consumption.txt",
                                          colClasses="character",sep=";",nrows=1)
                    ,comment.char="",colClasses=c(rep("character",2),
                     rep("numeric",7)),nrows=2880,skip=66637,
