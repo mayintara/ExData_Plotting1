@@ -60,6 +60,6 @@ plot(hpcDat$Time,hpcDat$Global_active_power,type="l",ylab="Global Active Power (
      xlab="")
 
 ## Copy Plot to PNG Device.
-dev.copy(png,file="plot2.png",width=480,height=480)
+dev.copy(png,file="plot 2.png",width=480,height=480)
 dev.off()
 

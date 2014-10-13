@@ -59,6 +59,6 @@ hist(hpcDat$Global_active_power, col="red", main="Global Active Power",
      xlab="Global Active Power (kilowatts)")
 
 ## Copy Plot1 to PNG Device.
-dev.copy(png,file="plot1.png",width=480,height=480)
+dev.copy(png,file="plot 1.png",width=480,height=480)
 dev.off()
 

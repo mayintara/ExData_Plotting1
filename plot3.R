@@ -63,7 +63,7 @@ legend("topright", ,col=c("black","red","blue"),pch = 151,
        legend=c("Sub_Metering_1","Sub_Metering_2","Sub_Metering_3"))
     
 ## Copy Plot to PNG Device.
-dev.copy(png,file="plot3.png",width=480,height=480)
+dev.copy(png,file="plot 3.png",width=480,height=480)
 dev.off()
 
 

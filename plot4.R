@@ -79,5 +79,5 @@ plot(hpcDat$Time,hpcDat$Global_reactive_power,type="l",
      ylab="Global_reactive_power",xlab="datetime")
 
 ## Copy Plot to PNG Device.
-dev.copy(png,file="plot4.png",width=480,height=480)
+dev.copy(png,file="plot 4.png",width=480,height=480)
 dev.off()
