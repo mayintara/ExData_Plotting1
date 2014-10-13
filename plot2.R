@@ -3,7 +3,7 @@
 
 ## Used the Following "dwnld" function to Download and Unzip the File from the 
 ## given (Url=https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2F
-## household_power_consumption.zip)
+## household_power_consumption.zip)-
 
 ## dwnld <- function(url=character(),datadir=character(),DestFile=character()){
 ## g<-"D:/Work/R/adir"
@@ -20,7 +20,7 @@
 ## RAM Calculations >>>> Since colClasses="numeric"
 ## 2075259 (rows) x 9 (cols) x 8 bytes/numeric
 ## 149418648 bytes ~ 149418648/2^20 bytes/MB ~ 142.49 MB
-## Overhead required (Rule Of Thumb x 2) so we need roughly 285 MB. (SAFE)
+## Overhead required (Rule Of Thumb x 2) so we need roughly 285 MB. (SAFE)-
 
 ## Further optimizing the read.table function >>>>
 ## colClasses="numeric"

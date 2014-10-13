@@ -20,10 +20,10 @@
 ## RAM Calculations >>>> Since colClasses="numeric"
 ## 2075259 (rows) x 9 (cols) x 8 bytes/numeric
 ## 149418648 bytes ~ 149418648/2^20 bytes/MB ~ 142.49 MB
-## Overhead required (Rule Of Thumb x 2) so we need roughly 285 MB. (SAFE)
+## Overhead required (Rule Of Thumb x 2) so we need roughly 285 MB. (SAFE)-
 
 ## Further optimizing the read.table function >>>>
-## colClasses="numeric"
+## colClasses="numeric"-
 ## comment.char=""
 ## na.strings="?"
 ## Since each day has 1440 minutes ~ 1440 obs/day
